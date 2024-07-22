@@ -1,0 +1,187 @@
+/* 1. Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --Red: #ff7a7a;
+  --Green: #38cc8c;
+  --Dark-Blue: #3e3c49;
+  --Grayish-Blue: #b9b6d3;
+  --box-shadow: 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-wrap: wrap;
+  color: white;
+  background-color: var(--Red);
+  background-image: url(./images/bg-intro-desktop.png);
+}
+
+div,
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-container {
+  height: 100%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 80px;
+}
+
+.column {
+  max-width: 40%;
+  height: fit-content;
+  gap: 24px;
+}
+
+h1 {
+  font-size: 2.986rem;
+}
+
+.free-trial-banner {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 68px;
+  background-color: #5D54A3;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.form-container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 42px;
+  background-color: white;
+  border-radius: 16px;
+  gap: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+#form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  width: 100%;
+  height: 55px;
+  padding-left: 30px;
+  font-weight: 600;
+  color: var(--Grayish-Blue);
+  border: 1px solid #DEDEDE;
+  border-radius: 8px;
+}
+
+input:focus {
+  color: var(--Dark-Blue);
+  border: 1px solid var(--Dark-Blue);
+}
+
+button {
+  display: flex;
+  height: 55px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+  background-color: var(--Green);
+  border: none;
+  border-bottom: 3px solid #3EB37F;
+  border-radius: 8px;
+}
+
+.tnc-statement>p {
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--Grayish-Blue);
+}
+
+.tnc-statement>p>b {
+  color: var(--Red);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
